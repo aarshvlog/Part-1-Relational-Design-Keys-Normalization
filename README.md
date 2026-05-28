@@ -43,11 +43,11 @@ The work includes:
 
 
 ## codejudge-dbms-part1/
-│
-├── README.md
-├── schema.sql
-├── schema_explanation.md
-├── keys_and_relationships.md
-├── normalization_notes.md
-├── assumptions.md
-└── erd.md
+
+-├── README.md
+-── schema.sql
+-├── schema_explanation.md
+-├── keys_and_relationships.md
+-├── normalization_notes.md
+-├── assumptions.md
+-└── erd.md
