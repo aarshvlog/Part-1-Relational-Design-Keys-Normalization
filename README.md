@@ -34,6 +34,16 @@ The work includes:
 - Regrade Requests
 - Plagiarism Flags
 
+codejudge-dbms-part1/
+│
+├── README.md
+├── schema.sql
+├── schema_explanation.md
+├── keys_and_relationships.md
+├── normalization_notes.md
+├── assumptions.md
+└── erd.md
+
 ## Database Design Goals
 - Reduce redundancy
 - Ensure referential integrity
