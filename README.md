@@ -1,68 +1,41 @@
-# CodeJudge Database Transactions and Safe DML – Part 4
+# CodeJudge Database Design – Part 1
 
 ## Objective
+This project converts the raw CodeJudge CSV dataset into a normalized relational database schema.
 
-This project demonstrates safe database modification operations and transaction reliability concepts using the CodeJudge database.
+The work includes:
+- schema understanding
+- entity identification
+- key and constraint analysis
+- normalization reasoning
+- SQL schema creation
+- ERD design
 
-The work focuses on:
+## Files Included
 
-* safe UPDATE operations
-* safe DELETE operations
-* transaction control
-* rollback and savepoints
-* ACID property reasoning
-* database reliability practices
+| File | Description |
+|------|-------------|
+| schema.sql | SQL DDL for database creation |
+| schema_explanation.md | Explanation of raw CSV schema |
+| keys_and_relationships.md | PK/FK/candidate/composite key reasoning |
+| normalization_notes.md | Normalization analysis |
+| assumptions.md | Assumptions made during design |
+| erd.md | ERD and relationship diagram |
 
----
+## Main Entities
+- Students
+- Courses
+- Batches
+- Problems
+- Contests
+- Submissions
+- Test Cases
+- Attendance
+- Regrade Requests
+- Plagiarism Flags
 
-# Safety Strategy
-
-The original imported database is never directly modified.
-
-All UPDATE and DELETE operations are performed on:
-
-* staging_students
-* staging_submissions
-* staging_enrollments
-* staging_attendance
-* staging_requests
-
-or inside controlled transactions.
-
-This prevents accidental corruption of production data.
-
----
-
-# Repository Files
-
-| File                | Purpose                                |
-| ------------------- | -------------------------------------- |
-| safe_updates.sql    | Safe UPDATE examples                   |
-| safe_deletes.sql    | Safe DELETE examples                   |
-| transactions.sql    | Transaction scenarios                  |
-| acid_explanation.md | ACID explanation using own transaction |
-| incident_note.md    | Reliability incident documentation     |
-
----
-
-# Topics Covered
-
-## Safe DML
-
-* validation before modification
-* targeted WHERE clauses
-* staged correction workflow
-
-## Transactions
-
-* BEGIN TRANSACTION
-* COMMIT
-* ROLLBACK
-* SAVEPOINT
-
-## Reliability
-
-* recovery planning
-* accidental update protection
-* auditability
-* rollback strategy
+## Database Design Goals
+- Reduce redundancy
+- Ensure referential integrity
+- Support scalability
+- Maintain normalized structure
